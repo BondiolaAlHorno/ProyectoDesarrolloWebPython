@@ -1,11 +1,13 @@
-from app.main.Asistencia import Asistencia
-from app.main.MateriaImplementada import MateriaImplementada
-from app.main.Persona import Persona
+from __future__ import annotations
+from typing import List
 from dataclasses import dataclass
+from app.main.Persona import Persona
 
 @dataclass
 class Docente(Persona):
     legajo:int
-    asistencia:[Asistencia]
-    materias:[MateriaImplementada]
+    asistencia:List[Asistencia]
+    materias:List[MateriaImplementada]
 
+from app.main.Asistencia import Asistencia
+from app.main.MateriaImplementada import MateriaImplementada
